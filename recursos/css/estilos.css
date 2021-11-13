@@ -1,0 +1,884 @@
+/* 
+azul 4471AB 
+gris 6E6D6A
+*/
+@import url("../tipografia/BebasNeue-Regular.ttf");
+@import url("../tipografia/Montserrat-Medium.ttf");
+:root{
+    --colorNegro: #000;
+    --colorAzul:#4471AB;
+    --colorAzulClaro: #379fdb; 
+    --colorGris: #6E6D6A;
+    --colorBlanco:#FFFFFF;
+
+    --tamanoTitulo:22px;
+    --tamanoTexto:15px;
+
+    --tipografiaTitulo:'Bebas';
+    --tipogrfiaTexto:'Montserrat';
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color:var(--colorNegro); 
+    box-sizing: border-box; 
+    font-family: var(--tipogrfiaTexto);
+    border: none;
+}
+
+    html
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    body
+    {
+        width: 100%;
+        height: 100%;
+    }
+    th,td
+    {
+        padding: 2px;
+        width: auto;
+        height: auto;
+        border: solid 1px var(--colorNegro);
+        font-size: 12px;
+    }
+    thead
+    {
+        background-color: var(--colorAzulClaro);
+        font-family: var(--tipografiaTitulo);
+    }
+    tbody
+    {
+        font-family: var(--tipogrfiaTexto);
+
+    }
+
+    h1 
+    {
+        font-size: 20px;
+    }
+#contenedor 
+{  
+    display: flex;
+    width:100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#menu
+{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 2px var(--colorAzul);
+
+}
+#logo_inicio
+{
+    width: 140px;
+    object-fit: contain;
+}
+#contenedor_logo
+{
+    display: flex;
+    width: 17%;
+    height: 100%;
+    justify-content:flex-start;
+    
+}
+#contenedor_bienvenida
+{
+    display:flex;
+    width: 42%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#contenedor_control
+{
+    display: flex;
+    width: 32%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.texto
+{
+    font-size: 20px;
+}
+
+.imagenes_control
+{
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+#seccion_principal{
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    /* background-color: #000; */
+}
+
+#menu_control
+{
+    display: flex;
+    width: 15%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.contenedor_seccion
+{
+    width: 85%;
+    height: 100%;
+}
+
+.boton_control
+{
+    cursor: pointer;
+    display: flex;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.boton_control:hover
+{
+    border-left: solid 10px var(--colorAzul);
+    border-bottom: solid 3px var(--colorAzul);
+    transition: all .04s ease-in-out;
+}
+.imagen_menu
+{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+.texto_menu
+{
+    width: auto;
+    font-size: var(--tamanoTexto);
+}
+
+#contenedor_dashboard
+{
+    /* visibility: hidden; */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_tickets
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_empresas
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_empleado
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_administradores
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+}
+/*
+Dashboard realizacion de prueba
+*/
+.seccion{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.seccion_tabla{
+    display: none;
+    width: 100%;
+    height: 80%;
+    margin-top: 10px;
+}
+
+#contenedor_contador{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+#contenedor_contador_tickets{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+#contenedor_contador_empresas{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+#contenedor_contador_empleado{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+#contenedor_contador_administradores{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;   
+}
+.seccion_contador{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#contenedor_tickets_pendientes{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#contenedor_tabla_pendientes{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+}
+
+#contenedor_tickets_no_resueltos{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#contenedor_tabla_no_resueltos{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+}
+
+#contenedor_tickets_resuelto{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#contenedor_tabla_resuelto{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+}
+
+#contenedor_peticion{
+    display: none;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#contenedor_tabla_peticion{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-direction: column ;
+    overflow-x:auto;
+}
+.imagen_contador{
+    width: 30px;
+    height: 25px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+.parrafo_contador{
+    display: flex;
+    width: auto;
+    font-size: var(--tamanoTexto);
+    justify-content: center;
+    align-items: center;
+}
+.tablas{
+    width: 90%;
+    height: auto;
+    display: block;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.titulo_seccion
+{
+    width: 100%;
+    height: 10%;
+}
+.contador_seccion
+{
+    width: 100%;
+    height: 10%;
+}
+.input_text
+{
+    width: 90%;
+    height: 30px;
+    border: solid 1px var(--colorGris);
+    padding-left: 10px;
+    font-size: var(--tamanoTexto);
+    font-family: var(--tipogrfiaTexto);
+}
+.input_text_empresa{
+    width: 90%;
+    height: 30px;
+    border: solid 1px var(--colorGris);
+    padding-left: 10px;
+    font-size: var(--tamanoTexto);
+    font-family: var(--tipogrfiaTexto);
+    text-align: center;
+}
+.input_text_empleado
+{
+    width: 90%;
+    height: 30px;
+    border: solid 1px var(--colorGris);
+    padding-left: 10px;
+    font-size: var(--tamanoTexto);
+    font-family: var(--tipogrfiaTexto);
+    text-align: center;
+}
+.input_text_administrador
+{
+    width: 100%;
+    height: 30px;
+    border: solid 1px var(--colorGris);
+    padding-left: 10px;
+    font-size: var(--tamanoTexto);
+    font-family: var(--tipogrfiaTexto);
+    text-align: center;
+}
+.input_text_administrador:focus{
+    outline: none;
+    border-radius: 10px;
+    border: solid 2px var(--colorAzul);
+    transition: all .3s ease-in-out;
+}
+.input_text:focus{
+    outline: none;
+    border-radius: 10px;
+    border: solid 2px var(--colorAzul);
+    transition: all .3s ease-in-out;
+}
+.input_text_empresa:focus{
+    outline: none;
+    border-radius: 10px;
+    border: solid 2px var(--colorAzul);
+    transition: all .3s ease-in-out;
+}
+.input_text_empleado:focus{
+    outline: none;
+    border-radius: 10px;
+    border: solid 2px var(--colorAzul);
+    transition: all .3s ease-in-out;
+}
+.boton
+{
+    padding: 10px;
+    padding-left: 30px;   
+    padding-right: 30px;   
+    background: var(--colorAzul);
+    color: var(--colorBlanco);
+}
+.boton:hover
+{
+    border: solid 2px var(--colorAzul);
+    background: var(--colorBlanco);
+    color: var(--colorNegro);
+}
+#contenedor_empresas_activas
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_tabla_empresas_activas
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-direction: column;
+    overflow-x:auto;
+}
+#contenedor_empresas_noactivas
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_tabla_empresas_noactivas
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+    flex-direction: column;
+}
+#contenedor_peticion_empresas
+{
+    display: none;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_tabla_peticion_empresas
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+    flex-direction: column;
+}
+#contenedor_agregar_empresas
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#contenedor_form_agregar_empresa
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+    flex-direction: column;
+}
+.form_agregar_empresa1{
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex-direction: row;
+
+}
+.form_agregar_empresa2{
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex-direction: row;
+
+}
+.seccion_empresa
+{
+    display: none;
+    width: 100%;
+    height: 80%;
+    margin-top: 10px;
+}
+
+.seccion_contador:hover
+{
+    border-bottom: solid 3px var(--colorAzul);
+    transition: all .06s ease-in-out;
+}
+.seccion_empleado
+{
+    display: none;
+    width: 100%;
+    height: 80%;
+    margin-top: 10px;
+}
+.seccion_administradores{
+    display: none;
+    width: 100%;
+    height: 80%;
+    margin-top: 10px;
+}
+#contenedor_empleado_activas
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_tabla_empleado_activas
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+    flex-direction: column;
+}
+#contenedor_tabla_administradores_activo
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    overflow-x:auto;
+    flex-direction: column;
+
+}
+#contenedor_empleado_noactivo
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_tabla_empleado_noactivo
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-direction: column;
+    overflow-x:auto;
+}
+#contenedor_tabla_administradores_noactivo
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-direction: column;
+    overflow-x:auto;
+}
+#contenedor_form_agregar_empleado
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contenedor_general_formulario
+{
+    display: flex;
+    padding: 5px;
+    width: 70%;
+    height: 10%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.contenedor_formulario1
+{
+    display: flex;
+    width: 45%;
+    height: auto;
+    justify-content:flex-start;
+    align-items: flex-start;
+    
+}
+.contenedor_formulario2 
+{
+    display: flex;
+    width: 45%;
+    height: auto;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+#contenido_agregar_empleado{
+    display: flex;
+    padding: 50px;
+    width: 80%;
+    height: 70%;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 2px var(--colorNegro);
+    border-radius: 25px;
+}
+
+
+.contenedor_formulario_agregar
+{
+    margin: 10px;
+    display: flex;
+    width: 60%;
+    height: auto;
+    justify-content: center;
+    align-items: center;  
+}
+.boton_tabla
+{
+    font-size: 15px;
+    cursor: pointer;
+}
+.contenedor_paginador
+{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.controladores_paginador
+{
+    cursor: pointer;
+    display: flex;
+    width: 10%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: var(--colorAzul);
+    border: solid 1px var(--colorAzul);
+    color: var(--colorBlanco);
+    padding: 10px;
+    font-size: 80%;
+}
+.controladores_paginador:hover{
+    border: solid 2px var(--colorAzul);
+    border-radius: 10px;
+    background: var(--colorBlanco);
+    color: var(--colorNegro); 
+}
+.img_accion{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+.texto{
+    font-size: 12px;
+}
+.contenedor_busqueda{
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    height: auto;
+    justify-content:space-around;
+    align-items: flex-end;
+    flex-direction:row;
+}
+.Cantidad_lista{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+
+}
+.lista1{
+    padding-right: 12px;
+    width: auto;
+    height: auto;
+}
+.lista2{
+    width: 20%;
+    height: auto;
+}
+.select_cantidad{
+    width: 50px;
+    font-size: var(--tamanoTexto);
+    border-radius: 10px;
+}
+.select_cantidad:hover{
+    background-color: var(--colorAzulClaro);
+    color: var(--colorBlanco);
+    transition: all .04s ease-in-out;
+}
+.barra_buscadora{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row;
+}
+.buscador1{
+    padding-right: 12px;
+    width: auto;
+    height: auto;
+}
+.buscado2{
+    width: 100%;
+    height: auto;
+}
+.input_barra_buscadora{
+    width: 300px;
+    height: auto;
+    font-size: var(--tamanoTexto);
+    border: solid 1px var(--colorNegro);
+    margin-right: 15px;
+}
+.input_barra_buscadora:focus{
+    outline: none;
+    border-radius: 10px;
+    border: solid 2px var(--colorAzul);
+    transition: all .3s ease-in-out;
+
+}
+#contenedor_contenido_ticketsPendientes{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_contenido_ticketsNoResueltos{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_contenido_ticketsResueltos{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#contenedor_contenido_ticketsAgregarTicket{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.input_paginador
+{
+    background-color: var(--colorBlanco);
+    width: 100px;
+    height: auto;
+    font-size: 12px;
+    text-align: center;
+}
+.input_paginador:focus
+{
+    outline: none;
+}
+#contenedor_administradores_activos{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+#contenedor_administradores_noactivos{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+#contenedor_administradores_agregar{
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+@font-face 
+{
+    font-family: 'Montserrat';
+    src: url("../tipografia/Montserrat-Medium.ttf");
+}
+
+@font-face 
+{
+    font-family: 'Bebas';
+    src: url("../tipografia/BebasNeue-Regular.ttf");
+}
